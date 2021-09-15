@@ -29,7 +29,7 @@ export class CreateOngs1631368674321 implements MigrationInterface {
                 },
 
                 {
-                  name: 'whatshap',
+                  name: 'whatsapp',
                   type: 'varchar',
                   isNullable: false
 
@@ -54,7 +54,7 @@ export class CreateOngs1631368674321 implements MigrationInterface {
                 },
 
                 {
-                  name: 'updated_at',
+                  name: 'update_at',
                   type: 'timestamp',
                   default: 'now()'
                 },
