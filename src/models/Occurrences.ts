@@ -16,6 +16,9 @@ class Occurences {
     @Column()
     value: string
 
+    @CreateDateColumn()
+    created_at: Date
+
 }
 
 export default Occurences
