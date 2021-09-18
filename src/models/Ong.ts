@@ -2,7 +2,7 @@ import { Column, Entity, CreateDateColumn,PrimaryGeneratedColumn, UpdateDateColu
 
 
 @Entity ('ongs')
-class Ongs{
+class Ong {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
@@ -30,4 +30,4 @@ class Ongs{
 
 }
 
-export default Ongs
+export default Ong;
