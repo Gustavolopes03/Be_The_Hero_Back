@@ -6,7 +6,7 @@ import IOngsRepository from "./interface/IOngsRepository";
 
 class OngsRepository implements IOngsRepository {
 
-    private ormRepository: Repository<Ong>
+    private ormRepository: Repository<Ong>;
 
     constructor () {
         this.ormRepository = getRepository(Ong);
@@ -26,4 +26,4 @@ class OngsRepository implements IOngsRepository {
     
 }
 
-export default OngsRepository
+export default OngsRepository;

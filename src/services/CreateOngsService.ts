@@ -1,4 +1,4 @@
-import OngsRepository from "../repositories/OngsRepository"
+import OngsRepository from "../repositories/OngsRepository";
 
 
 interface Request {
@@ -21,4 +21,4 @@ class CreateOngService  {
     }
 }
 
-export default CreateOngService
+export default CreateOngService;

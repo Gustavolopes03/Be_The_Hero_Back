@@ -68,6 +68,6 @@ export class CreateOngs1631368674321 implements MigrationInterface {
       await queryRunner.dropTable(
         'ongs'
     )
-    }
+    };
     
-}
+};
