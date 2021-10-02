@@ -22,6 +22,18 @@ class OngsRepository implements IOngsRepository {
 
     }
 
+    async findOneByEmail(emailData:string): Promise<Ong | undefined> {
+
+        const ongs = await this.ormRepository.findOne({
+            where: {
+                email: emailData,
+            },
+        });
+
+        return ongs;
+    }
+
+
 
     
 }
