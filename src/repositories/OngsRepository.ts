@@ -33,6 +33,14 @@ class OngsRepository implements IOngsRepository {
         return ongs;
     }
 
+    async findOneById(id: string): Promise<Ong | undefined> {
+
+        const ong = await this.ormRepository.findOne(id);
+
+        return ong;
+
+    }
+
 
 
     

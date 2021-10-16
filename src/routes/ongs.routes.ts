@@ -8,6 +8,7 @@ import OngValidate from '../midllewares/OngValidate';
 const ongsRouter = Router();
 const ongsController = new OngsController();
 
-ongsRouter.post('/', OngValidate(requestSchema), ongsController.create);
+ongsRouter.post('/', OngValidate(requestSchema) , ongsController.create);
+ongsRouter.get('/:id', ongsController.findById);
 
 export default ongsRouter;
