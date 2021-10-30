@@ -10,11 +10,11 @@ interface Request {
 }
 
 class CreateOngService  {
-    public execute( dataOngs: Request ) {
+    public async execute( dataOngs: Request ) {
 
         const ongsRepository = new OngsRepository();
 
-        const ong = ongsRepository.create(dataOngs);
+        const ong = await ongsRepository.create(dataOngs);
 
         return ong;
 

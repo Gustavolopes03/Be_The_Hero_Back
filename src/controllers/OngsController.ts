@@ -8,9 +8,9 @@ export default class OngsController {
 
         const { name, email, whatsapp, city, uf } = request.body;
         const createongService = new CreateOngService();
-        const ong = createongService.execute({name,email,whatsapp,city,uf});
+        const ong = await createongService.execute({name,email,whatsapp,city,uf});
 
-        response.status(201).json(ong);
+        response.status(201).json({ong});
 
     }
 

@@ -16,9 +16,9 @@ class OngsRepository implements IOngsRepository {
 
         const ong = this.ormRepository.create(dataOngs);
 
-        await this.ormRepository.save(ong);
+        const ongAux = await this.ormRepository.save(ong);
 
-        return ong;
+        return ongAux;
 
     }
 

@@ -1,7 +1,7 @@
-import { Column, Entity, CreateDateColumn,PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, Entity, CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 
-@Entity ('ongs')
+@Entity('ongs')
 class Ong {
 
     @PrimaryGeneratedColumn('uuid')
