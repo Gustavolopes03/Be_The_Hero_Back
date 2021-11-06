@@ -54,7 +54,7 @@ export class CreateOngs1631368674321 implements MigrationInterface {
                 },
 
                 {
-                  name: 'update_at',
+                  name: 'updated_at',
                   type: 'timestamp',
                   default: 'now()'
                 },

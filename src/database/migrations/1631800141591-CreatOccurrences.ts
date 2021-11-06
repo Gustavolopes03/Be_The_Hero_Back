@@ -46,7 +46,11 @@ export class CreatOccurrences1631800141591 implements MigrationInterface {
                         default: 'now()'
                     },
 
-                    
+                    {
+                        name: 'updated_at',
+                        type: 'timestamp',
+                        default: 'now()'
+                    },
 
                 ],
             })
