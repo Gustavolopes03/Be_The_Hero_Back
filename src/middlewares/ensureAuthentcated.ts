@@ -1,4 +1,4 @@
-import { Request,Response } from "express"
+import { Request,Response } from "express";
 import { verify } from "jsonwebtoken";
 import authConfig from "../config/auth";
 import OngsRepository from "../repositories/OngsRepository";
@@ -11,7 +11,7 @@ interface ITokenPayload {
     sub: string;
 }
 
-export default async function insureAuthentcated ( request:Request,response:Response): Promise<void> {
+export default async function ensureAuthentcated ( request:Request,response:Response): Promise<void> {
 
     const authOng = request.headers.authorization;
 
@@ -36,6 +36,12 @@ export default async function insureAuthentcated ( request:Request,response:Resp
         if (!ong) {
             throw new Error("Token Invalid!")
         }
+
+        request.ong = {
+            ongId: ong.id
+        }
+
+         
 
     }
     catch{

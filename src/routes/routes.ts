@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import ongsRouter from './ongs.routes';
+import occRouter from './occ.routes';
 
 const routes = Router();
 
