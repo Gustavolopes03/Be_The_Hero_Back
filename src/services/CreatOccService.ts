@@ -1,18 +1,20 @@
+import Occurences from "../models/Occurrences";
 import OccRepository from "../repositories/OccRepository";
 
 
 interface Request {
-    tytle: string,
+    ong_id: string,
+    title: string,
     description: string,
     value: string
 }
 
 class CreateOccService  {
-    public execute( dataOcc: Request ) {
+    public async execute( dataOcc: Request ):Promise<Occurences> {
 
         const occRepository = new OccRepository();
 
-        const occurences = occRepository.create(dataOcc);
+        const occurences = await occRepository.create(dataOcc);
 
         return occurences;
 

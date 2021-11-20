@@ -16,9 +16,9 @@ class OccRepository implements IOccRepository {
 
         const occurences = this.ormRepository.create(dataOcc);
 
-        await this.ormRepository.save(occurences);
+        const occurence = await this.ormRepository.save(occurences);
 
-        return occurences;
+        return occurence;
 
     }
 

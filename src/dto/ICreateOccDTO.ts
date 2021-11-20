@@ -1,7 +1,7 @@
 
 export default interface ICreateOccDTO {
 
-    tytle:string;
+    title:string;
     description:string;
     value:string;
 

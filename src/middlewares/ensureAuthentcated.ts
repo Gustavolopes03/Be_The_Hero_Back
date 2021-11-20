@@ -1,5 +1,6 @@
-import { Request,Response } from "express";
+import { Request,Response,NextFunction } from "express";
 import { verify } from "jsonwebtoken";
+import { MetadataWithSuchNameAlreadyExistsError } from "typeorm";
 import authConfig from "../config/auth";
 import OngsRepository from "../repositories/OngsRepository";
 import FindOngByIdService from "../services/FindOngByIdService";
@@ -11,7 +12,7 @@ interface ITokenPayload {
     sub: string;
 }
 
-export default async function ensureAuthentcated ( request:Request,response:Response): Promise<void> {
+export default async function ensureAuthentcated ( request:Request,response:Response,next:NextFunction): Promise<void> {
 
     const authOng = request.headers.authorization;
 
@@ -41,10 +42,8 @@ export default async function ensureAuthentcated ( request:Request,response:Resp
             ongId: ong.id
         }
 
-         
-
-    }
-    catch{
+         return next();
+    }catch{
         throw new Error("Catastrofic Error")
     }
 
