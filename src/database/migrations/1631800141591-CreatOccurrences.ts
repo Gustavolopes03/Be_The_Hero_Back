@@ -23,7 +23,7 @@ export class CreatOccurrences1631800141591 implements MigrationInterface {
                     },
 
                     {
-                        name: 'tytle',
+                        name: 'title',
                         type:'varchar',
                         isNullable:false
                     },

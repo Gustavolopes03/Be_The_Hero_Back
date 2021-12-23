@@ -8,12 +8,15 @@ class Occurences {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
+    @Column()
+    ong_id: string;
+
     @ManyToOne(() => Ong)
     @JoinColumn({ name:'ong_id' })
     ong: Ong;
 
     @Column()
-    tytle: string;
+    title: string;
     
     @Column()
     description: string

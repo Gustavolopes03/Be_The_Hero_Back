@@ -18,10 +18,26 @@ class OccRepository implements IOccRepository {
 
         const occurence = await this.ormRepository.save(occurences);
 
+        console.log(occurences)
+
         return occurence;
 
     }
 
+    async findByOngId(ong_id: string): Promise<Occurences[]> {
+
+        const occurences = await this.ormRepository.find({
+            where: {
+                ong_id
+            }
+        });
+
+        return occurences;
+    }
+    
+    async deleteOccurencesById(id: string): Promise<void>{
+        await this.ormRepository.delete(id);
+    }
 
     
 }

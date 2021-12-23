@@ -12,7 +12,7 @@ interface ITokenPayload {
     sub: string;
 }
 
-export default async function ensureAuthentcated ( request:Request,response:Response,next:NextFunction): Promise<void> {
+export default async function ensureAuthentcated ( request:Request,response:Response,next:NextFunction): Promise<any> {
 
     const authOng = request.headers.authorization;
 
@@ -42,7 +42,7 @@ export default async function ensureAuthentcated ( request:Request,response:Resp
             ongId: ong.id
         }
 
-         return next();
+        return next();
     }catch{
         throw new Error("Catastrofic Error")
     }
